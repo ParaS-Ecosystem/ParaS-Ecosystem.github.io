@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParaS Ecosystem — Code Once, Execute on All</title>
+<meta name="description" content="ParaS Ecosystem is an open, device-agnostic HPC-AI software ecosystem for portable, high-performance computing across CPU, GPU, NPU, FPGA and QPU architectures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+<meta property="og:title" content="ParaS Ecosystem — Code Once, Execute on All">
+<meta property="og:description" content="An open, device-agnostic HPC-AI software ecosystem for portable, high-performance computing across CPU, GPU, NPU, FPGA and QPU architectures.">
+<meta property="og:image" content="assets/images/favicon-512.png">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">
+      <img class="nav__mark" src="assets/images/logo.png" alt="ParaS Ecosystem logo" width="32" height="32">
+      <span>ParaS<em>Ecosystem</em></span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#projects">Projects</a>
+      <a href="#governance">Governance</a>
+      <a href="https://github.com/ParaS-Ecosystem" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="eyebrow">[ open · device-agnostic · hpc–ai ]</p>
+      <h1 class="hero__title">Code once.<br>Execute on <span class="accent-amber">all</span>.</h1>
+      <p class="hero__sub">ParaS Ecosystem is an open-source software stack for portable,
+        high-performance computing — one source, compiled and tuned across CPU, GPU,
+        NPU, FPGA and QPU targets, without rewriting for each backend.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">Explore projects</a>
+        <a href="https://github.com/ParaS-Ecosystem" target="_blank" rel="noopener" class="btn btn--ghost">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="hero__diagram">
+      <svg viewBox="0 0 420 380" role="img" aria-label="Schematic of code flowing from application through the ParaS compiler to CPU, GPU, NPU, FPGA and QPU targets">
+        <g font-family="IBM Plex Mono" font-size="11" fill="#8C96A3">
+          <rect x="60" y="10" width="300" height="46" fill="none" stroke="#242B34"/>
+          <text x="210" y="38" text-anchor="middle" fill="#E7E9EC">YOUR SOURCE CODE</text>
+
+          <line x1="210" y1="56" x2="210" y2="86" stroke="#E3B23A" stroke-width="1.4" class="draw-line"/>
+
+          <rect x="30" y="88" width="360" height="46" fill="none" stroke="#242B34"/>
+          <text x="210" y="116" text-anchor="middle" fill="#E7E9EC">PARAS COMPILER + RUNTIME</text>
+
+          <line x1="210" y1="134" x2="210" y2="164" stroke="#E3B23A" stroke-width="1.4" class="draw-line"/>
+
+          <rect x="0" y="166" width="420" height="42" fill="none" stroke="#242B34"/>
+          <text x="210" y="192" text-anchor="middle" fill="#52A8D8">HARDWARE ABSTRACTION</text>
+
+          <g stroke="#E3B23A" stroke-width="1" fill="none" class="draw-line">
+            <path d="M60 208 V228 H30 V246"/>
+            <path d="M150 208 V228 H128 V246"/>
+            <path d="M210 208 V246"/>
+            <path d="M270 208 V228 H292 V246"/>
+            <path d="M360 208 V228 H390 V246"/>
+          </g>
+
+          <g text-anchor="middle" fill="#E7E9EC">
+            <rect x="0" y="248" width="60" height="40" fill="none" stroke="#2E3641"/>
+            <text x="30" y="272">CPU</text>
+            <rect x="98" y="248" width="60" height="40" fill="none" stroke="#2E3641"/>
+            <text x="128" y="272">GPU</text>
+            <rect x="180" y="248" width="60" height="40" fill="none" stroke="#2E3641"/>
+            <text x="210" y="272">NPU</text>
+            <rect x="262" y="248" width="60" height="40" fill="none" stroke="#2E3641"/>
+            <text x="292" y="272">FPGA</text>
+            <rect x="360" y="248" width="60" height="40" fill="none" stroke="#2E3641"/>
+            <text x="390" y="272">QPU</text>
+          </g>
+
+          <text x="210" y="320" text-anchor="middle" fill="#5B6570" font-size="10">ONE SOURCE — FIVE TARGETS</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section__head">
+      <p class="eyebrow">[ 01 · about ]</p>
+      <h2>One codebase, every accelerator.</h2>
+    </div>
+    <div class="about__grid">
+      <p class="about__lead">HPC and AI teams increasingly target a mix of hardware —
+        CPUs from different vendors, GPUs, NPUs, FPGAs, and emerging quantum
+        accelerators. ParaS Ecosystem exists so that portability doesn't come at
+        the cost of performance, and performance doesn't come at the cost of
+        maintaining five versions of the same kernel.</p>
+      <ul class="spec-list">
+        <li><span class="spec-list__k">Scope</span><span class="spec-list__v">Compiler, runtime, libraries, developer tools</span></li>
+        <li><span class="spec-list__k">Model</span><span class="spec-list__v">Open governance under a Technical Steering Committee</span></li>
+        <li><span class="spec-list__k">License</span><span class="spec-list__v">Open source, per-project approved licensing</span></li>
+        <li><span class="spec-list__k">Status</span><span class="spec-list__v">Active development · public repositories</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section section--muted" id="why">
+    <div class="section__head">
+      <p class="eyebrow">[ 02 · principles ]</p>
+      <h2>Why ParaS</h2>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <span class="principle__tag">PORTABLE</span>
+        <p>A single source targets every supported backend. No forked kernels
+          per vendor, no duplicated tuning effort.</p>
+      </div>
+      <div class="principle">
+        <span class="principle__tag">PERFORMANT</span>
+        <p>Portability is validated against native toolchains, not offered
+          in exchange for giving up throughput.</p>
+      </div>
+      <div class="principle">
+        <span class="principle__tag">OPEN</span>
+        <p>Development, design discussion, review and roadmap happen in
+          public, under a published technical charter.</p>
+      </div>
+      <div class="principle">
+        <span class="principle__tag">MODULAR</span>
+        <p>Compiler, runtime, and libraries are independently useful and
+          independently versioned.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="section" id="architecture">
+    <div class="section__head">
+      <p class="eyebrow">[ 03 · architecture ]</p>
+      <h2>The stack, top to bottom</h2>
+      <p class="section__sub">Each layer is a real boundary in the system — this is
+        the path your code actually takes on its way to silicon.</p>
+    </div>
+    <div class="stack-diagram">
+      <svg viewBox="0 0 1000 460" role="img" aria-label="ParaS Ecosystem architecture: applications and frameworks, libraries and developer tools, the ParaS compiler and runtime, a hardware abstraction layer, and CPU, GPU, NPU, FPGA and QPU targets">
+        <g font-family="IBM Plex Mono" font-size="12">
+
+          <!-- Layer 1 -->
+          <rect x="140" y="10" width="720" height="64" fill="none" stroke="#242B34"/>
+          <text x="500" y="38" text-anchor="middle" fill="#E7E9EC" font-size="14">APPLICATIONS &amp; HPC / AI FRAMEWORKS</text>
+          <text x="500" y="58" text-anchor="middle" fill="#5B6570" font-size="10.5">SCIENTIFIC · ML · SIMULATION WORKLOADS</text>
+
+          <line x1="500" y1="74" x2="500" y2="98" stroke="#E3B23A" stroke-width="1.4"/>
+
+          <!-- Layer 2 -->
+          <rect x="80" y="100" width="840" height="64" fill="none" stroke="#242B34"/>
+          <text x="500" y="128" text-anchor="middle" fill="#E7E9EC" font-size="14">PARAS LIBRARIES &amp; DEVELOPER TOOLS</text>
+          <text x="500" y="148" text-anchor="middle" fill="#5B6570" font-size="10.5">CLAP · MATH LIBRARIES · PROFILING &amp; BUILD TOOLING</text>
+
+          <line x1="500" y1="164" x2="500" y2="188" stroke="#E3B23A" stroke-width="1.4"/>
+
+          <!-- Layer 3 -->
+          <rect x="20" y="190" width="960" height="64" fill="none" stroke="#242B34"/>
+          <text x="500" y="218" text-anchor="middle" fill="#E7E9EC" font-size="14">PARAS COMPILER &amp; RUNTIME</text>
+          <text x="500" y="238" text-anchor="middle" fill="#5B6570" font-size="10.5">SOURCE-TO-BACKEND COMPILATION · SCHEDULING · MEMORY MODEL</text>
+
+          <line x1="500" y1="254" x2="500" y2="278" stroke="#52A8D8" stroke-width="1.4"/>
+
+          <!-- Layer 4 -->
+          <rect x="20" y="280" width="960" height="46" fill="none" stroke="#242B34"/>
+          <text x="500" y="308" text-anchor="middle" fill="#52A8D8" font-size="13">HARDWARE ABSTRACTION &amp; BACKEND INTERFACES</text>
+
+          <!-- Fan out -->
+          <g stroke="#E3B23A" stroke-width="1" fill="none">
+            <path d="M100 326 V352 H100 V368"/>
+            <path d="M300 326 V352 H300 V368"/>
+            <path d="M500 326 V368"/>
+            <path d="M700 326 V352 H700 V368"/>
+            <path d="M900 326 V352 H900 V368"/>
+          </g>
+
+          <!-- Targets -->
+          <g text-anchor="middle" fill="#E7E9EC" font-size="13">
+            <rect x="40" y="370" width="120" height="56" fill="none" stroke="#2E3641"/>
+            <text x="100" y="404">CPU</text>
+            <rect x="240" y="370" width="120" height="56" fill="none" stroke="#2E3641"/>
+            <text x="300" y="404">GPU</text>
+            <rect x="440" y="370" width="120" height="56" fill="none" stroke="#2E3641"/>
+            <text x="500" y="404">NPU</text>
+            <rect x="640" y="370" width="120" height="56" fill="none" stroke="#2E3641"/>
+            <text x="700" y="404">FPGA</text>
+            <rect x="840" y="370" width="120" height="56" fill="none" stroke="#2E3641"/>
+            <text x="900" y="404">QPU</text>
+          </g>
+
+          <text x="500" y="450" text-anchor="middle" fill="#5B6570" font-size="10.5">EMERGING ACCELERATORS ARE ADDED AT THE BACKEND INTERFACE — LAYERS ABOVE DO NOT CHANGE</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section--muted" id="projects">
+    <div class="section__head">
+      <p class="eyebrow">[ 04 · projects ]</p>
+      <h2>What's in the ecosystem</h2>
+    </div>
+    <div class="projects">
+      <a class="project-card" href="https://github.com/ParaS-Ecosystem/ParaS" target="_blank" rel="noopener">
+        <div class="project-card__top">
+          <span class="project-card__kind">CORE · COMPILER</span>
+          <span class="project-card__arrow">↗</span>
+        </div>
+        <h3>ParaS</h3>
+        <p>The ParaS compiler and runtime — translates a single source into
+          tuned execution across heterogeneous backends.</p>
+      </a>
+      <a class="project-card" href="https://github.com/ParaS-Ecosystem/CLAP-Library" target="_blank" rel="noopener">
+        <div class="project-card__top">
+          <span class="project-card__kind">LIBRARY</span>
+          <span class="project-card__arrow">↗</span>
+        </div>
+        <h3>CLAP</h3>
+        <p>Cross-platform Linear-algebra And PDE library, built to run
+          consistently across the ecosystem's supported targets.</p>
+      </a>
+      <a class="project-card project-card--more" href="https://github.com/ParaS-Ecosystem" target="_blank" rel="noopener">
+        <div class="project-card__top">
+          <span class="project-card__kind">ORGANIZATION</span>
+          <span class="project-card__arrow">↗</span>
+        </div>
+        <h3>All repositories</h3>
+        <p>Browse every project, incubating and experimental, in the
+          ParaS-Ecosystem GitHub organization.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE -->
+  <section class="section" id="governance">
+    <div class="section__head">
+      <p class="eyebrow">[ 05 · governance ]</p>
+      <h2>How decisions get made</h2>
+    </div>
+    <div class="governance">
+      <div class="governance__chart" aria-hidden="true">
+        <div class="gnode gnode--top">Technical Steering Committee</div>
+        <div class="gline"></div>
+        <div class="gnode-row">
+          <div class="gnode">ParaS<span>maintainers</span></div>
+          <div class="gnode">CLAP<span>maintainers</span></div>
+          <div class="gnode">Libraries<span>maintainers</span></div>
+          <div class="gnode">Tools<span>maintainers</span></div>
+        </div>
+      </div>
+      <div class="governance__text">
+        <p>The ecosystem is governed by a Technical Steering Committee that sets
+          overall technical direction, while each project's maintainers retain
+          day-to-day autonomy over issues, reviews, and releases.</p>
+        <p>The full model — scope, decision-making, voting, and maintainer
+          process — is written down and versioned like the rest of the code.</p>
+        <a class="btn btn--ghost" href="https://github.com/ParaS-Ecosystem/governance/blob/main/TECHNICAL_CHARTER.md" target="_blank" rel="noopener">Read the Technical Charter →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED -->
+  <section class="section section--cta">
+    <div class="section__head section__head--center">
+      <p class="eyebrow">[ 06 · get involved ]</p>
+      <h2>Built in the open. Built with contributors.</h2>
+      <p class="section__sub">Issues, discussions, and pull requests happen directly
+        on GitHub — that's also where the roadmap lives.</p>
+    </div>
+    <div class="hero__cta hero__cta--center">
+      <a href="https://github.com/ParaS-Ecosystem" target="_blank" rel="noopener" class="btn btn--primary">Visit the organization</a>
+      <a href="https://github.com/ParaS-Ecosystem/.github/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" class="btn btn--ghost">Contributing guide →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span>© <span id="year"></span> ParaS Ecosystem</span>
+    <div class="footer__links">
+      <a href="https://github.com/ParaS-Ecosystem" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/ParaS-Ecosystem/governance/blob/main/TECHNICAL_CHARTER.md" target="_blank" rel="noopener">Technical Charter</a>
+      <a href="https://github.com/ParaS-Ecosystem/.github/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Code of Conduct</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
